@@ -1,9 +1,19 @@
-// JavaScript Practice: 07
+// JavaScript Practice: 08
 console.clear();
 
-reducer = () => {
-    return [[0, 1], [2, 3], [4, 5], [6, 7], [8, 9]].reduce((acc, cur) => {
-        return acc.concat(cur)
-    }, [])
+
+const id = Symbol.for('id');
+
+let user = {
+    [id]: 1,
+    role: 'user',
+    array: [0, 1, 2, 3],
 };
-console.log(reducer()); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+const admin = {
+    [id]: 2,
+    role: 'admin'
+};
+const object = Object.assign({}, user, admin);
+
+object.array.push(100500); // 2
+console.log(object[id], object.array.pop()); // 100500
