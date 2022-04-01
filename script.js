@@ -1,14 +1,10 @@
-// JavaScript Practice: 06
+// JavaScript Practice: 07
 console.clear();
 
-let
-    a = true,
-    b = true,
-    c = false;
 
-let X = c ? (b ? 'VedaGna' : 'Yarasu') : (a ? 'Gnapika' : 'Yarasu');
-console.log(X); // Gnapika
-
-
-// Tip - when using the ternary operator, add parentheses (but not as much as in the last option above).
-
+reducer = () => {
+    return [[0, 1], [2, 3]].reduce((acc, cur) => {
+        return acc.concat(cur);
+    },[2,2])
+};
+console.log(reducer()); // [ 2, 2, 0, 1, 2, 3 ]
