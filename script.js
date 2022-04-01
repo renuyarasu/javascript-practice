@@ -1,16 +1,17 @@
 // JavaScript Practice | https://t.me/practicejs
 console.clear();
-// Practice:03
+
+// Practice:04
 
 const myObject = {
-    name: 'VedaGna',
-    age: 5,
-    function_01: function () {
-        console.log(this.age);
-    },
-    function_02: () => {
-        console.log(this.age);
-    }
+    category: 'Books',
+    names: ['Classics', 'Comic', 'Fantasy', 'Fiction', 'Romance']
 };
-myObject.function_01(); // 5
-myObject.function_02(); // undefined
+
+let second = { ...myObject };
+second.names.push('Self-Help');
+console.log(second.names); // [ 'Classics', 'Comic', 'Fantasy', 'Fiction', 'Romance', 'Self-Help' ]
+console.log(second.names.pop());
+console.log(second.names.shift());
+console.log(second.names.push('Non-Fiction'));
+console.log(second.names); // [ 'Comic', 'Fantasy', 'Fiction', 'Romance', 'Non-Fiction' ]
