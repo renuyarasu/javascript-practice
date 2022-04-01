@@ -1,7 +1,6 @@
-// JavaScript Practice
+// JavaScript Practice | https://t.me/practicejs
 console.clear();
 
 
-let str = 'JavaScript';
-let letter = str[0];
-console.log(letter); // J
+let str = new String('array');
+console.log(typeof str); // Object
